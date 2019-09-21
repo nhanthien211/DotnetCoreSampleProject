@@ -32,7 +32,7 @@ namespace DotnetCoreSampleProject
         {
             //IDbConnection inject
             services.AddTransient<IDbConnection>((sp) =>
-                new NpgsqlConnection(Configuration.GetConnectionString("sampleDb")));
+                new SqlConnection(Configuration.GetConnectionString("sampleDb")));
 
 
             ConfigureDi(services);
